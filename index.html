@@ -5,42 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarjeta Virtual - Galpón Creativo</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* Estilo global */
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #2ecc71, #1abc9c); /* Gradiente en tonos verde esmeralda */
+      font-family: 'Montserrat', sans-serif;
+      background-color: #2ecc71; /* Fondo verde esmeralda */
       margin: 0;
       padding: 0;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #ffffff; /* Texto en blanco para contraste */
+      color: #7f8c8d; /* Gris plomo */
       text-align: center;
     }
 
     /* Contenedor de la tarjeta */
     .container {
       width: 100%;
-      max-width: 600px;
-      background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
       border-radius: 20px;
       padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
-    /* Título "Galpón Creativo" */
+    /* Título principal "Galpón Creativo" */
     .galpon-title {
-      font-family: 'Pacifico', cursive;
-      font-size: 4rem;
-      color: #2ecc71; /* Verde esmeralda */
-      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #7f8c8d; /* Gris plomo */
+      text-transform: uppercase;
+      letter-spacing: 5px;
       margin-bottom: 30px;
-      letter-spacing: 2px;
-      animation: fadeInTitle 1.5s ease-in-out;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      animation: fadeInTitle 1s ease-out;
     }
 
     /* Animación de aparición del título */
@@ -59,13 +60,13 @@
     h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #ffffff;
+      color: #7f8c8d; /* Gris plomo */
       margin-bottom: 20px;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     }
 
     #countdown {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin: 20px 0;
       text-align: center;
     }
@@ -77,38 +78,38 @@
 
     .countdown-label {
       font-weight: 400;
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.4rem;
+      color: rgba(0, 0, 0, 0.6);
     }
 
     /* Mensaje de Año Nuevo */
     #message {
       margin-top: 30px;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
 
     .motivational {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 500;
     }
 
     .highlight {
       font-weight: 700;
-      color: #2ecc71; /* Verde esmeralda */
+      color: #7f8c8d; /* Gris plomo */
     }
 
     .new-year {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: bold;
-      color: #2ecc71;
+      color: #7f8c8d;
     }
 
-    /* Botón de acción (si se quiere agregar más interacción) */
+    /* Botón de acción */
     .action-btn {
       margin-top: 30px;
       padding: 15px 30px;
       font-size: 1.2rem;
-      background-color: #2ecc71;
+      background-color: #7f8c8d; /* Gris plomo */
       color: #fff;
       border: none;
       border-radius: 25px;
@@ -118,7 +119,7 @@
     }
 
     .action-btn:hover {
-      background-color: #27ae60;
+      background-color: #95a5a6; /* Gris más claro */
       transform: translateY(-2px);
     }
   </style>
