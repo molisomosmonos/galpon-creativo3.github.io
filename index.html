@@ -4,155 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarjeta Virtual - Galpón Creativo</title>
-  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* Estilo global */
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #2ecc71; /* Fondo verde esmeralda */
       margin: 0;
       padding: 0;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      background-color: #2ecc71; /* Fondo verde esmeralda */
       color: #7f8c8d; /* Gris plomo */
       text-align: center;
     }
 
     /* Contenedor de la tarjeta */
-    .container {
-      width: 100%;
-      max-width: 650px;
-      background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    .card {
+      background: #ffffff; /* Fondo blanco para contraste */
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Título principal "Galpón Creativo" */
-    .galpon-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4.5rem;
+    /* Título principal */
+    .title {
+      font-size: 2.2rem;
       font-weight: 700;
       color: #7f8c8d; /* Gris plomo */
+      margin-bottom: 15px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      letter-spacing: 5px;
-      margin-bottom: 30px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-      animation: fadeInTitle 1s ease-out;
     }
 
-    /* Animación de aparición del título */
-    @keyframes fadeInTitle {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Subtítulo */
+    .subtitle {
+      font-size: 1rem;
+      color: #7f8c8d;
+      margin-bottom: 15px;
     }
 
-    /* Título secundario y contador */
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #7f8c8d; /* Gris plomo */
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    }
-
+    /* Contador */
     #countdown {
-      font-size: 1.6rem;
-      margin: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .countdown-item {
       text-align: center;
     }
 
-    #countdown p {
-      margin: 10px 0;
-      font-weight: 600;
+    .countdown-number {
+      font-size: 1.8rem;
+      font-weight: 700;
     }
 
     .countdown-label {
-      font-weight: 400;
-      font-size: 1.4rem;
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    /* Mensaje de Año Nuevo */
-    #message {
-      margin-top: 30px;
-      font-size: 1.4rem;
-    }
-
-    .motivational {
-      font-size: 1.6rem;
-      font-weight: 500;
-    }
-
-    .highlight {
-      font-weight: 700;
+      font-size: 0.9rem;
       color: #7f8c8d; /* Gris plomo */
     }
 
-    .new-year {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #7f8c8d;
-    }
-
-    /* Botón de acción */
-    .action-btn {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background-color: #7f8c8d; /* Gris plomo */
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .action-btn:hover {
-      background-color: #95a5a6; /* Gris más claro */
-      transform: translateY(-2px);
+    /* Mensaje de Año Nuevo */
+    .new-year-message {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #7f8c8d; /* Gris plomo */
+      margin-top: 20px;
+      line-height: 1.5;
+      display: none; /* Ocultar inicialmente */
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Tarjeta Principal -->
-    <div class="card">
-      <!-- Título animado "GALPÓN CREATIVO" -->
-      <div class="galpon-title">
-        GALPÓN <span>CREATIVO</span>
+  <div class="card">
+    <div class="title">Galpón Creativo</div>
+    <div class="subtitle">Lo que falta para llegar al 2025</div>
+    <div id="countdown">
+      <div class="countdown-item">
+        <div class="countdown-number" id="days">0</div>
+        <div class="countdown-label">DÍAS</div>
       </div>
-      <h1>Cuenta Regresiva para el <span class="year-highlight">2025</span></h1>
-      <div id="countdown">
-        <p><span id="days">0</span> <span class="countdown-label">DÍAS</span></p>
-        <p><span id="hours">0</span> <span class="countdown-label">HORAS</span></p>
-        <p><span id="minutes">0</span> <span class="countdown-label">MINUTOS</span></p>
-        <p><span id="seconds">0</span> <span class="countdown-label">SEGUNDOS</span></p>
+      <div class="countdown-item">
+        <div class="countdown-number" id="hours">0</div>
+        <div class="countdown-label">HORAS</div>
       </div>
-      <div id="message" class="hidden">
-        <h2>🎨 <span class="highlight">Galpón Creativo</span> te desea un <br>
-          <span class="new-year">¡Buen Inicio de Año!</span> 🎨</h2>
-        <p>
-          <span class="motivational">¡Que el <span class="year-highlight">2025</span> esté lleno de creatividad,</span> 
-          <span class="motivational highlight">éxito</span> y 
-          <span class="motivational">momentos memorables!</span>
-        </p>
+      <div class="countdown-item">
+        <div class="countdown-number" id="minutes">0</div>
+        <div class="countdown-label">MINUTOS</div>
       </div>
-      <!-- Botón (opcional para acción) -->
-      <button class="action-btn">¡Empezar 2025!</button>
+      <div class="countdown-item">
+        <div class="countdown-number" id="seconds">0</div>
+        <div class="countdown-label">SEGUNDOS</div>
+      </div>
+    </div>
+    <div class="new-year-message" id="newYearMessage">
+      🎉 ¡Feliz Año Nuevo! <br>
+      <span>Que el 2025 esté lleno de creatividad, éxito y momentos memorables.</span>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date("January 1, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("newYearMessage").style.display = "block";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
