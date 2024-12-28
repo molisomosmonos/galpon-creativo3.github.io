@@ -15,34 +15,40 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #2ecc71; /* Fondo verde esmeralda */
-      color: #7f8c8d; /* Gris plomo */
+      background: linear-gradient(135deg, #2ecc71, #27ae60); /* Fondo moderno en verde esmeralda */
       text-align: center;
+      color: #7f8c8d; /* Gris plomo */
     }
 
     /* Contenedor de la tarjeta */
     .card {
-      background: #ffffff; /* Fondo blanco para contraste */
+      background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
       width: 90%;
       max-width: 400px;
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Imagen del logo */
+    .logo {
+      max-width: 100px;
+      margin-bottom: 15px;
     }
 
     /* Título principal */
     .title {
       font-size: 2.2rem;
       font-weight: 700;
-      color: #7f8c8d; /* Gris plomo */
+      color: #7f8c8d;
       margin-bottom: 15px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     /* Subtítulo */
     .subtitle {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #7f8c8d;
       margin-bottom: 15px;
     }
@@ -61,26 +67,28 @@
     .countdown-number {
       font-size: 1.8rem;
       font-weight: 700;
+      color: #34495e;
     }
 
     .countdown-label {
       font-size: 0.9rem;
-      color: #7f8c8d; /* Gris plomo */
+      color: #7f8c8d;
     }
 
     /* Mensaje de Año Nuevo */
     .new-year-message {
       font-size: 1.5rem;
       font-weight: 600;
-      color: #7f8c8d; /* Gris plomo */
+      color: #34495e;
       margin-top: 20px;
       line-height: 1.5;
-      display: none; /* Ocultar inicialmente */
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="card">
+    <img src="Logo.Jpeg" alt="Logo Galpón Creativo" class="logo">
     <div class="title">Galpón Creativo</div>
     <div class="subtitle">Lo que falta para llegar al 2025</div>
     <div id="countdown">
