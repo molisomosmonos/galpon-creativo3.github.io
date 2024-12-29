@@ -15,9 +15,10 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #2ecc71, #27ae60); /* Fondo moderno en verde esmeralda */
+      background: linear-gradient(135deg, #2ecc71, #27ae60); /* Fondo verde esmeralda */
       text-align: center;
       color: #7f8c8d; /* Gris plomo */
+      overflow: hidden;
     }
 
     /* Contenedor de la tarjeta */
@@ -28,12 +29,8 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Imagen del logo */
-    .logo {
-      max-width: 100px;
-      margin-bottom: 15px;
+      position: relative;
+      z-index: 10;
     }
 
     /* Título principal */
@@ -58,6 +55,9 @@
       display: flex;
       justify-content: space-around;
       margin-top: 20px;
+      background: rgba(46, 204, 113, 0.2); /* Fondo verde translúcido */
+      padding: 20px;
+      border-radius: 10px;
     }
 
     .countdown-item {
@@ -84,11 +84,49 @@
       line-height: 1.5;
       display: none;
     }
+
+    /* Animación de pelotitas */
+    .bubble {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .bubble-1 { background: #ff6b81; top: 10%; left: 10%; animation-delay: 0s; }
+    .bubble-2 { background: #a29bfe; top: 50%; left: 30%; animation-delay: 1s; }
+    .bubble-3 { background: #55efc4; bottom: 20%; right: 20%; animation-delay: 2s; }
+    .bubble-4 { background: #fdcb6e; top: 70%; right: 10%; animation-delay: 3s; }
+    .bubble-5 { background: #fab1a0; bottom: 30%; left: 5%; animation-delay: 4s; }
+    .bubble-6 { background: #74b9ff; top: 30%; left: 60%; animation-delay: 1.5s; }
+    .bubble-7 { background: #e17055; bottom: 10%; right: 40%; animation-delay: 2.5s; }
+    .bubble-8 { background: #d63031; top: 15%; right: 15%; animation-delay: 0.5s; }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Pelotitas animadas -->
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+  <div class="bubble bubble-3"></div>
+  <div class="bubble bubble-4"></div>
+  <div class="bubble bubble-5"></div>
+  <div class="bubble bubble-6"></div>
+  <div class="bubble bubble-7"></div>
+  <div class="bubble bubble-8"></div>
+
+  <!-- Tarjeta principal -->
   <div class="card">
-    <img src="Logo.Jpeg" alt="Logo Galpón Creativo" class="logo">
     <div class="title">Galpón Creativo</div>
     <div class="subtitle">Lo que falta para llegar al 2025</div>
     <div id="countdown">
